@@ -1,0 +1,22 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@section scripts
+{
+<script type="text/javascript">
+
+    var appData = angular.module("widgetRegistryData", []);
+
+    var appConfig = {
+        apiEndpoint: "/api/widgets/",
+        templateRoot: "/templates/"
+    };
+    appData.constant("appConfig", appConfig);
+
+</script>
+
+<script src="~/app/app.js"></script>
+}
+
+<div ui-view></div>
